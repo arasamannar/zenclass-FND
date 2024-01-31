@@ -1,0 +1,96 @@
+.form-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.form {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 2px 2px 2px 2px hsla(0, 100%, 1%, 0.123);
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  width: 300px; 
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.row label {
+  align-self: flex-start;
+  margin-bottom: 5px; /* Reduce space between label and input */
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 10px 15px 10px 30px; /* Adjust padding for smaller input */
+  border-radius: 15px; /* Rounded borders */
+  border: 1px solid #ccc;
+  font-size: 14px; /* Adjust font size if needed */
+}
+.input-icon input::after{
+  border: #785DA6;
+}
+
+.input-icon svg {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.submit {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 14px; /* Adjust button font size */
+  margin-top: 10px;
+}
+
+.errormessage {
+  color: rgb(255, 0, 0);
+  font-size: small;
+  margin-top: 5px;
+  font-style: italic;
+}
+.google-signin{
+  display: flex;
+  gap: 10px;
+}
+.gicon{
+  color: hsl(0, 77%, 54%);
+}
+.ficon{
+  color: hsl(240, 79%, 49%);
+}
+.top-heading, label{
+  color: #785DA6;
+}
+.fpass{
+  border-right: 2px solid black;
+  margin-right: 8px;
+  padding-right: 4px;
+}
