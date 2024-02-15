@@ -1,6 +1,65 @@
+*{
+  /* border: 1px solid red; */
+  min-width: 0;
+   margin: 0;
+  padding: 0;
+}
 body{
     background-image: url("./Images/school-6900381_1920.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
+  
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  
+  main {
+    flex: 1; 
+    padding: 20px;
+  }
+
+@keyframes moveGradient {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .App-header {
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #9c00e4);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-size: 200% 100%;
+    animation: moveGradient 5s ease-in-out 5s infinite alternate;
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #cd8c5e, #d55a96, #895c9d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  
+  
+  .heading {
+    margin-bottom: 20px;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  ul{
+    display: flex;
+    gap: 10px;
+  }
+  
