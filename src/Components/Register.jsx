@@ -1,23 +1,38 @@
 import React from "react";
 import { useLoginFormik } from "./useLoginFormik";
-import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import "./Register.css";
+import { Link, useNavigate } from "react-router-dom";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 
-function Login() {
+function Register() {
+  let navigate = useNavigate();
   const formik = useLoginFormik();
-
   return (
     <>
-      <div className="form-container">
-        <form onSubmit={formik.handleSubmit} className="form">
-          <div className="top-heading">
-            <h3>Welcome Back!</h3>
+      <div className="container">
+        <form onSubmit={formik.handleSubmit}>
+          <div className="user-container">
+            <label htmlFor="username">Username</label>
+            <div className="input-icon">
+              <input
+                type="text"
+                id="username"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.username}
+              />
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+            <div>
+              {formik.touched.username && formik.errors.username ? (
+                <div className="errormessage">{formik.errors.username}</div>
+              ) : null}{" "}
+            </div>
           </div>
-          <div className="row">
+
+          <div className="email-container">
             <label htmlFor="email">Email</label>
             <div className="input-icon">
               <input
@@ -34,8 +49,8 @@ function Login() {
               <div className="errormessage">{formik.errors.email}</div>
             ) : null}
           </div>
- 
-          <div className="row">
+
+          <div className="pass-container">
             <label htmlFor="password">Password</label>
             <div className="input-icon">
               <FontAwesomeIcon icon={faLock} />
@@ -53,12 +68,8 @@ function Login() {
               <div className="errormessage">{formik.errors.password}</div>
             ) : null}
           </div>
-          <div className="forgetpassword">
-            <Link to="/forgotpass" className="fpass">Forget password</Link> 
-            <Link to='/register'>Register user</Link>
-          </div>
           <div className="google-signin">
-            <Link to='#'>
+            <Link to="/Register.jsx">
               <FontAwesomeIcon icon={faGoogle} className="gicon" />
             </Link>
             <Link to="#">
@@ -72,7 +83,12 @@ function Login() {
               className="submit"
               disabled={formik.isSubmitting}
             >
-              Sign In
+              Submit
+            </button>
+            <button
+              onClick={() => navigate('/login')}
+            >
+              Cancel
             </button>
           </div>
         </form>
@@ -81,4 +97,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

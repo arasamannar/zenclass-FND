@@ -1,0 +1,112 @@
+.forgotPassContainer {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.uiInterstitial {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.interstitialHeader h2 {
+    text-align: center;
+}
+
+.interstitialContent p {
+    text-align: center;
+}
+
+.inputtext {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.interstitialBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cancelButton, .searchButton {
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .forgotPassContainer {
+        padding: 10px;
+    }
+
+    .cancelButton, .searchButton {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .interstitialBar {
+        flex-direction: column;
+    }
+}
+
+._9f5q {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 56px;
+}
+
+._9clo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+}
+
+._9clo._9f5r {
+    grid-template-columns: 1fr 1fr;
+    width: 56%;
+}
+
+._9clm {
+    color: #67788a;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+._am1d ._9clm {
+    color: #465a69;
+}
+
+._9clk._36wv._3cr5 {
+    display: block;
+    margin-bottom: 12px;
+    width: max-content;
+}
+
+._am1d ._9clk._36wv._3cr5 {
+    color: #1c2b33;
+}
+.clearfix{
+    zoom: 1;
+    width: 100%; /* Adjust the width as necessary */
+    overflow: auto; /* This ensures the container wraps around the floated child */
+}
+.rfloat {
+    display: flex;
+    gap: 10px;
+    justify-content:flex-end;
+}
+div > a{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+div button{
+    margin: 0px 10px 10px 0px;
+    border-radius: 8px;
+    border-style: none;
+}

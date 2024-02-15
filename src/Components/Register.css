@@ -1,0 +1,44 @@
+/* Updated styles for increased height and centered icons */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* Increase the height as desired */
+  background-color: aliceblue;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+.user-container,
+.row,
+.pass-container,
+.email-container {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/* Adjust icon styling for center alignment */
+.input-icon svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-right: 20px;
+  color: #555; 
+}
+
+.errormessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 2px;
+}
