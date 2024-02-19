@@ -1,8 +1,12 @@
+.login-container{
+  min-height: 100dvh;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center; 
-  height: 100dvh;
+  min-height: 70dvh;
 }
 
 .form {
@@ -14,7 +18,7 @@
   background-color: hsl(0, 0%, 100%);
   box-shadow: 2px 2px 2px 2px hsla(0, 100%, 1%, 0.123);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: auto;
   width: 300px; 
 }
@@ -36,39 +40,51 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-width: 100%;
+  width: 100%;
+}
+input:focus{
+  outline-color: #785DA6;
 }
 
 .input-icon input {
   width: 100%;
-  padding: 10px 15px 10px 30px;
-  border-radius: 15px; 
+  padding: 10px 15px 10px 35px; /* Adjust left padding to accommodate icon */
+  border-radius: 15px;
   border: 1px solid #ccc;
-  font-size: 14px; 
-}
-.input-icon input::after{
-  border: #785DA6;
+  font-size: 14px;
 }
 
 .input-icon svg {
   position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-60%);
+  left: 25px; /* Adjust based on actual need but aligns with input padding start */
+  top: 40%;
+  transform: translateY(-50%); /* Correctly centers the icon vertically */
   color: #555;
 }
 
 .submit {
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 5px 10px;
   border-radius: 5px;
   border: none;
-  background-color: blue;
+  background-color: #0000ff;
   color: white;
   font-weight: bold;
   font-size: 14px;
   margin-top: 10px;
+  transition: all 0.2s ease-in-out; /* Smooth transition for visual effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow for depth */
 }
+
+.submit:hover {
+  background-color: #003399; /* Darker shade when hovered for visual feedback */
+}
+
+.submit:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow to simulate pressing down */
+  transform: translateY(2px); /* Move the button down to simulate depth */
+}
+
 
 .errormessage {
   color: rgb(255, 0, 0);
@@ -86,7 +102,7 @@
 .ficon{
   color: hsl(240, 79%, 49%);
 }
-.top-heading, label{
+.top-heading{
   color: #785DA6;
 }
 .fpass{

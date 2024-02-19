@@ -1,44 +1,79 @@
-/* Updated styles for increased height and centered icons */
+
+.main-content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
 
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 70vh; /* Increase the height as desired */
+  align-items: center; 
   background-color: aliceblue;
   max-width: 400px;
-  margin: 0 auto;
+  width: 100%; 
   border-radius: 10px;
+  margin: auto;
+  padding: 20px; 
 }
-
-form {
-  width: 100%;
-}
-
-.user-container,
-.row,
-.pass-container,
-.email-container {
-  margin-bottom: 20px;
+h5{
+  color: #785DA6;
 }
 
 input {
-  width: 100px;
+  width: calc(100% - 4px);
   padding: 8px;
   margin-bottom: 8px;
 }
-
-/* Adjust icon styling for center alignment */
-.input-icon svg {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  margin-right: 20px;
-  color: #555; 
+.reg-input-icon input:focus{
+  outline-color: #785DA6;
 }
 
-.errormessage {
-  color: red;
+.reg-input-icon svg {
+  position: absolute; 
+  left: 10px;
+  transform: translateY(-30%);
+  margin-right: 20px;
+  color: #555;
+}
+.reg-input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.reg-input-icon input {
+  width: 100%;
+  padding: 10px 15px 10px 30px; /* Adjust left padding to accommodate icon */
+  border-radius: 15px;
+  border: 1px solid #ccc;
   font-size: 14px;
-  margin-top: 2px;
+}
+.pass-container, .email-container, .user-container{
+  padding: 10px 0px;
+}
+.reg-cancel-btn{
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #afafb5;
+  color: rgb(19, 19, 19);
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out; 
+  box-shadow: 0 4px 8px rgba(213, 213, 213, 0.37);
+}
+.reg-cancel-btn:hover {
+  background-color: #9a9b9e; 
+}
+
+.reg-cancel-btn:active {
+  box-shadow: 0 2px 4px rgba(213, 213, 213, 0.37); 
+  transform: translateY(2px); 
 }

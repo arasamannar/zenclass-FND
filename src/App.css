@@ -1,8 +1,8 @@
 *{
   /* border: 1px solid red; */
-  min-width: 0;
    margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body{
     background-image: url("./Images/school-6900381_1920.jpg");
@@ -16,50 +16,59 @@ body{
     flex-direction: column;
     align-items: center; 
   }
-
   
   main {
     flex: 1; 
     padding: 20px;
   }
-
-@keyframes moveGradient {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   
   .App-header {
-    background: linear-gradient(135deg, #ff6a00, #ee0979, #9c00e4);
+    top: 0;
+    background: hsl(0, 0%, 100%);
     padding: 20px;
-    color: white;
+    color: hsl(0, 0%, 7%);
     text-align: center;
     position: relative;
-    background-size: 200% 100%;
-    animation: moveGradient 5s ease-in-out 5s infinite alternate;
+    border-radius: 20px;
+    color: #785DA6;
   }
-  
-  .heading {
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #cd8c5e, #d55a96, #895c9d);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block;
-  }
-  
-  
-  .heading {
-    margin-bottom: 20px;
-  }
-  ul li {
+
+.container-foo{
+  display: flex;
+  justify-content: center;
+}
+.footer{
+  position: fixed;
+  background-color: hsl(0, 10%, 96%);
+  width: 100%;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+  ul li { /*  for footer component  */
     list-style-type: none;
   }
   ul{
     display: flex;
     gap: 10px;
   }
-  
+
+.fit-picture{ /*  for missing component image */
+  position:absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  box-shadow: 5px rgba(0, 0, 0, 0.2) 1px;
+  top: 20%;
+  left: 55%;
+}
+.messagecont {     /*  for missing component  */
+  position: fixed;
+  width: 600px;
+  height: 300px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: azure;
+  text-align: center;
+}

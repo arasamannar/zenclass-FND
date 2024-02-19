@@ -1,21 +1,42 @@
 import React from "react";
-import { useLoginFormik } from "./useLoginFormik";
 import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import Header from "./Header/Header";
+import Footer from "./Header/Footer";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 function Login() {
-  const formik = useLoginFormik();
-
+  const loginSchema = Yup.object().shape({
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    password: Yup.string()
+      .min(4, "Password length must be greater than 4")
+      .required("Password is required"),
+  });
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: loginSchema,
+    onSubmit: (values) => {
+      console.log(values);
+      alert("Data has been submitted successfully");
+    },
+  });
   return (
     <>
-      <div className="form-container">
+    <div className="login-container">
+<Header />
+    <main>
+    <div className="form-container">
         <form onSubmit={formik.handleSubmit} className="form">
           <div className="top-heading">
-            <h3>Welcome Back!</h3>
+            <h4>Welcome Back!</h4>
           </div>
           <div className="row">
             <label htmlFor="email">Email</label>
@@ -70,13 +91,17 @@ function Login() {
             <button
               type="submit"
               className="submit"
-              disabled={formik.isSubmitting}
             >
               Sign In
             </button>
           </div>
         </form>
       </div>
+    </main>
+     
+      <Footer />
+    </div>
+    
     </>
   );
 }

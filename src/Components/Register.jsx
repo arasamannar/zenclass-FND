@@ -1,40 +1,45 @@
-import React from "react";
 import { useLoginFormik } from "./useLoginFormik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import Header from "./Header/Header";
+import Footer from "./Header/Footer";
 
 function Register() {
   let navigate = useNavigate();
   const formik = useLoginFormik();
   return (
-    <>
+    <><Header />
+    <div className="main-content-area">
+
       <div className="container">
+        <h5>Register New User...</h5>
+        <br />
         <form onSubmit={formik.handleSubmit}>
           <div className="user-container">
-            <label htmlFor="username">Username</label>
-            <div className="input-icon">
+            <label htmlFor="name">Name</label>
+            <div className="reg-input-icon">
               <input
                 type="text"
-                id="username"
+                id="name"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
-                value={formik.values.username}
+                value={formik.values.name}
               />
               <FontAwesomeIcon icon={faUser} />
             </div>
             <div>
-              {formik.touched.username && formik.errors.username ? (
-                <div className="errormessage">{formik.errors.username}</div>
+              {formik.touched.name && formik.errors.name ? (
+                <div className="errormessage">{formik.errors.name}</div>
               ) : null}{" "}
             </div>
           </div>
 
           <div className="email-container">
             <label htmlFor="email">Email</label>
-            <div className="input-icon">
+            <div className="reg-input-icon">
               <input
                 type="text"
                 id="email"
@@ -52,7 +57,7 @@ function Register() {
 
           <div className="pass-container">
             <label htmlFor="password">Password</label>
-            <div className="input-icon">
+            <div className="reg-input-icon">
               <FontAwesomeIcon icon={faLock} />
               <input
                 type="password"
@@ -86,6 +91,7 @@ function Register() {
               Submit
             </button>
             <button
+            className="reg-cancel-btn"
               onClick={() => navigate('/login')}
             >
               Cancel
@@ -93,6 +99,9 @@ function Register() {
           </div>
         </form>
       </div>
+      <Footer />
+    </div>
+    
     </>
   );
 }

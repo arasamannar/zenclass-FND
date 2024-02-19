@@ -7,14 +7,15 @@ const loginSchema = Yup.object().shape({
     .max(20, "Too Long!")
     .required("Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  password: Yup.string()
-    .min(4, "Password length must be greater than 4")
-    .required("Password is required"),
-    batch: Yup.string().required("Batch is required"),
-    phone: Yup.string().required("Phone is required"),
-    qualification: Yup.string().required("Qualification is required"),
-    yopass: Yup.string().required("year of passing is required"),
-    yoexperience:Yup.string().required("year of experience is required")
+  batch: Yup.string().required("Batch is required"),
+  phone: Yup.string().required("Phone is required"),
+  qualification: Yup.string().required("Qualification is required"),
+  yopass: Yup.string().required("year of passing is required"),
+  yoexperience: Yup.string().required("year of experience is required"),
+  github: Yup.string(),
+  portfolio: Yup.string(),
+  resume: Yup.string(),
+  
 });
 
 export const useLoginFormik = () => {
@@ -22,19 +23,19 @@ export const useLoginFormik = () => {
     initialValues: {
       username: "",
       email: "",
-      password: "",
-      name:"",
-      batch:"",
-      phone:"",
-      qualification:"",
-      yopass:"",
-      yoexperience:"",
+      batch: "",
+      phone: "",
+      qualification: "",
+      yopass: "",
+      yoexperience: "",
+      github:"",
+      portfolio:"",
+      resume:"",
     },
     validationSchema: loginSchema,
     onSubmit: (values) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-      }, 400);
+      console.log(values);
+      alert("Data has been submitted successfully");
     },
   });
   return formik;

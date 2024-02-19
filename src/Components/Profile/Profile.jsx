@@ -20,10 +20,10 @@ function Profile() {
         <section className="cardSection">
           <ProfileImage></ProfileImage>
         </section>
-
+        
         <section className="cardSection">
           <div className="namegrid">
-            <label htmlFor="name" className="label-style">
+            <label htmlFor="username" className="label-style">
               Name
             </label>
             <div>
@@ -185,19 +185,28 @@ function Profile() {
               Github URL
             </label>
             <div>
-              <input type="text" id="github" className="formInputs" />
+              <input type="text" id="github" className="formInputs" onChange={(e) => {
+                  formik.handleChange(e);
+                  setHasChanges(true);
+                }}/>
             </div>
             <label htmlFor="portfolio" className="label-style">
               Portfolio URL
             </label>
             <div>
-              <input type="text" id="portfolio" className="formInputs" />
+              <input type="text" id="portfolio" className="formInputs" onChange={(e) => {
+                  formik.handleChange(e);
+                  setHasChanges(true);
+                }}/>
             </div>
             <label htmlFor="resume" className="label-style">
               Resume URL
             </label>
             <div>
-              <input type="text" id="resume" className="formInputs" />
+              <input type="text" id="resume" className="formInputs" onChange={(e) => {
+                  formik.handleChange(e);
+                  setHasChanges(true);
+                }}/>
             </div>
           </div>
         </section>
@@ -206,7 +215,7 @@ function Profile() {
             <button
               className="saveBtn btn btn-primary"
               disabled={
-                !hasChanges || formik.errors.length > 0 || formik.isSubmitting
+                !hasChanges || formik.errors.length > 0
               }
               type="submit"
             >

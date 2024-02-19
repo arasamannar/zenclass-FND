@@ -1,0 +1,11 @@
+.header__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: hsl(0, 12%, 93%); /* Example background color */
+    position: fixed; /* Makes the topbar fixed at the top */
+    width: 100%; /* Ensures the topbar extends full width */
+    top: 0; /* Aligns topbar at the top of the viewport */
+    z-index: 1000; /* Ensures topbar stays above other content */
+  }

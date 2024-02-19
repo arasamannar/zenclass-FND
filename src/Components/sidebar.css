@@ -1,22 +1,30 @@
-
 .sidebar {
-    width: 50px; /* Width of the sidebar when collapsed */
-    height: 100vh; /* Full height */
-    background-color: hsl(0, 12%, 93%); /* Sidebar background color */
-    color: white; /* Icon color */
-    padding: 10px 5px; /* Padding around icons */
-    transition: width 0.5s; /* Smooth transition for expanding/collapsing */
-    display: flex;
-    flex-direction: column; /* Align icons vertically */
-    align-items: center; /* Center icons horizontally */
-  }
-  
-  .sidebar.expanded {
-    width: 150px; /* Expanded width */
-  }
-  
-  .sidebar i {
-    margin: 80px 0; /* Space between icons */
-  }
-  
-  
+  width: 50px; /* Adjusted for collapsed state */
+  background-color: hsl(0, 12%, 93%);
+  transition: width 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar {
+  height: calc(100vh - 69.5px);
+  position: sticky;
+  top: 69.5px;
+}
+
+.sidebar.expanded {
+  width: 210px; /* Adjusted for expanded state */
+}
+
+.siconcontainer {
+  display: flex;
+  align-items: center; /* Ensures vertical centering */
+  justify-content: center; /* Centers content horizontally in the container */
+  gap: 10px;
+  width: 100%;
+}
+
+.sideicon {
+  font-size: 24px; 
+  margin-left: 20px;
+}

@@ -8,6 +8,7 @@
     border-radius: 16px;
     padding: 40px 60px;
     margin: 8px auto;
+    background-color: #efefef;
 }
 .workgrid, .namegrid{
     display: grid;

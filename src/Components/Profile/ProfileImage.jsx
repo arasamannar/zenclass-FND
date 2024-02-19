@@ -34,7 +34,7 @@ function ProfileImage() {
   return (
     <div className="App">
       <Avatar src={url} sx={{ width: 150, height: 150 }} />
-      <input type="file" onChange={handleImageChange} />
+      <input type="file" name='profilePic' onChange={handleImageChange} />
       <button onClick={handleSubmit}>Upload</button>
     </div>
   );

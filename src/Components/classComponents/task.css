@@ -1,0 +1,23 @@
+/* .taskcontainer{
+    position: relative;
+    top: 69.5px;
+    height: 500px;
+} */
+.taskonecont{
+    margin: 96px 0 0 72px;
+    width: calc(100vw - 72px);
+    min-height: calc(100vh - 96px);
+}
+.finalcontainer{
+    width: 768px;
+    border: 2px solid #efefef;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin: 0 auto 8px!important;
+    box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

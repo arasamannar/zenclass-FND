@@ -1,0 +1,175 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  .reccontainer, .sessioncontainer {
+    max-width: 800px; 
+    width: 90%;
+    border: 2px solid hsl(0, 1%, 45%);
+    border-radius: 16px;
+    padding: 40px 2vw; /* Responsive padding */
+    margin: 8px auto;
+    background-color: #efefef;
+    box-sizing: border-box; 
+  }
+  @media (max-width: 768px) {
+    .reccontainer, .sessioncontainer {
+      padding: 20px 5%; /* Increase padding for smaller devices */
+      max-width: 100%; /* Allow containers to expand */
+    }
+  
+    .sessionsContainer {
+      grid-template-columns: repeat(3, 1fr); /* Adjust grid columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sessionsContainer {
+      grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+      padding: 16px; /* Adjust padding */
+    }
+  
+    .roadmap-area {
+      width: 90%; /* Adjust roadmap area width */
+    }
+  }
+    
+.sideContainer{
+  display: flex;
+  flex-direction: column;
+}
+.roadmap-area, .session-container {
+  background: #fff;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: -webkit-max-content;
+  height: max-content;
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+.roadmap-area {
+  width: 386px;
+  left: 884px;
+  top: 96px;
+}
+.progress-head {
+  width: 100%;
+  height: 49px;
+  left: 884px;
+  top: 96px;
+  background: #f7f5fc;
+  border-radius: 8px 8px 0 0;
+  margin: auto;
+  padding: 10px;
+}
+.progress-header {
+  font-weight: 500;
+  margin: 8px 4px;
+  font-size: 1.2rem;
+}
+.sessionsContainer {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-column-gap: 32px;
+  -webkit-column-gap: 32px;
+  column-gap: 32px;
+  grid-row-gap: 16px;
+  row-gap: 16px;
+  justify-items: center;
+  padding: 16px 32px;
+}
+.sessionsContainer .roadmap_icon_container {
+  border: 2px solid #4b0dba;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.RICompleted {
+  background-color: #4b0dba;
+  color: #fff;
+}
+.step_path_left, .step_path_right {
+  width: 28px;
+  border: 2px solid #93a4b7;
+  border-radius: 10px;
+  position: relative;
+  bottom: 32px;
+}
+.step_path_right {
+  left: 40px;
+}
+.mt-2, .my-2 {
+  margin-top: .5rem!important;
+}
+.h6, h6 {
+  font-size: 1rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.sessionsContainer h6 {
+  display: grid;
+  place-items: center;
+  height: inherit;
+  -webkit-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+.step_path_bottom {
+  width: 12px;
+  border: 2px solid #93a4b7;
+  border-radius: 10px;
+  position: relative;
+  left: 11.5px;
+  bottom: 4px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.step_path_left {
+  right: 32px;
+}
+.step_path_left, .step_path_right {
+  width: 28px;
+  border: 2px solid #93a4b7;
+  border-radius: 10px;
+  position: relative;
+  bottom: 32px;
+}
+.class-content {
+  flex: 1 1;
+  overflow: auto;
+  min-width: 380px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+.row-container {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 24px;
+  gap: 24px;
+  margin-top: 60px;
+}
+.reccontainer{
+  display: flex;
+  justify-content: space-between;
+}
